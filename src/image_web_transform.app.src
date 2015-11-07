@@ -1,0 +1,24 @@
+{application, image_web_transform, [
+	{description, ""},
+	{vsn, "0.1.0"},
+	{id, "git"},
+	{modules, []},
+	{registered, []},
+	{applications, [
+		kernel,
+		stdlib,
+		inets,
+		asn1,
+		crypto,
+    	compiler,
+    	syntax_tools,
+    	xmerl,
+		public_key,
+		ssl,
+		ranch,
+		cowlib,
+		cowboy
+	]},
+	{mod, {image_web_transform_app, []}},
+	{env, []}
+]}.

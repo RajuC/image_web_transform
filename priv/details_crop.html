@@ -1,0 +1,112 @@
+<html>
+<head>
+<style type="text/css">
+body	{
+		margin: auto;
+	}
+#tableform	{	
+			position: absolute; /* or absolute */
+			top: 47%;
+			left: 20%;
+			margin:10px auto;
+			border: medium groove gray;
+			background:white;
+			padding:10px;	
+			width:800px;
+			height: 310px;	
+		}
+
+.imgDetails{
+			position: absolute; /* or absolute */
+			top: 3%;
+			left: 20%;
+			margin:5px auto;
+			border: medium groove gray;
+			color:white;
+			background:#808080;
+			padding:10px;
+			width:800px;
+			height: 270px;
+			float:left;			
+			list-style-type: disc;
+			padding-top: 5px;
+}		
+        #load_screen{
+        background: #000;
+        z-index:10;
+        position: fixed;
+        top:0px;
+        width:100%;
+        height:100%;
+        min-height: 480px;
+        }
+        #load_screen .loading {
+        color:#FFF;
+        width:100%;
+        height:24px;
+        margin:300px auto;
+        text-align: center;
+        }  
+</style>
+<script language="javascript" type="text/javascript">
+    window.addEventListener("load",function(){
+        var load_screen = document.getElementById("load_screen");
+        document.body.removeChild(load_screen);
+        });
+</script>
+</head>
+
+
+<body>
+        <div id = "load_screen"><div class = "loading"> Loading Your File </div></div>
+		<div class ="imgDetails">
+			<p> 
+			<img src="/home/raju/Desktop/images/1.png" alt="Smiley face" height="250" width="500" align = "right" >
+			<ul>
+			<li> <b> Original Image Details: </b> </li><br>
+			  <li>Image size: 400 KB</li>
+			  <li>Image WidthxHeight: 400x250</li>
+			  <li>format: jpg</li>
+			</ul>	
+			</p>	
+			<p>
+				<form action="/upload" method="post">
+					  <button name="subject" type="submit" value="fav_HTML">Resize Image</button> <br> <br>
+				</form>
+				<form action="/cropimg" method="post">
+					  <button name="subject" type="submit" value="fav_CSS">Crop Image to Circle</button>
+				</form>
+		</div>		
+<div id = "tableform">
+		<h3 align= "center"> Choose Details to tranform your image</h3>
+		<form action="/upload" type = "text" method="post">
+			Rotation : <select name="rotation">
+							<option value="noRotation">No Rotation</option>
+							<option value="90_clock">90 deg clockwise</option>
+							<option value="90_antiClock">90 deg anti-clockwise</option>
+							<option value="180_clock">180 deg clockwise</option>
+							<option value="180_antiClock">180 deg anti-clockwise</option>
+						</select><br><br>
+			Scale to % : <select name="resize">
+						<option value="noScale">No Scale</option>
+						<option value="25_scale">Scale to 25%</option>
+						<option value="50_scale">Scale to 50%</option>
+						<option value="75_scale">Scale to 75%</option>
+					</select>	<h3>OR</h3>
+			Crop Image by Width, Height, Left and Top Values  <br><br>
+			Width: <input type="text" name="width" size="7"/>
+			Height: <input type="text" name="height" size="7"/>
+			Left: <input type="text" name="left" size="7"/>
+			Top: <input type="text" name="top" size="7"/>  <br><br>
+
+			Image Format: <select name="imageFormat">
+							<option value="jpg">JPEG</option>
+							<option value="png">PNG</option>
+						</select>	<br><br>		
+			<input type="submit" value="submit" />
+			<input type="reset" value="reset" />
+
+		</form>		
+	</div>
+</body>
+</html>

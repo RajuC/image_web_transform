@@ -1,0 +1,96 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	color: #061C37;
+	background: #25060B;
+	background-repeat:repeat-x;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;
+}
+
+
+#mainPicture
+{
+clear:both;
+width:670px;
+height:345px;
+background-image:url(mainImage1.jpg);
+background-repeat:no-repeat;
+background-size: 670px 345px;
+}
+
+
+#headerTitle
+{
+position:relative;
+text-align:left;
+top:14px;
+left:22px;
+font-size:27px;
+color:#FFFFFF;
+font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+}
+
+h1
+{
+font-size:25px;
+margin-bottom:10px;
+padding-top:18px;
+margin-left:15px;
+margin-top:15px;
+color:#1F1603;
+}
+
+a
+{
+color:#C87002;
+text-decoration:none;
+}
+
+
+html, body {
+text-align: center;
+}
+
+p {text-align: left;}
+
+
+div.menu2
+{
+    width:670px;margin:0 auto;/*Uncomment this line to make the menu center-aligned.*/
+    text-align:center;
+    background-image: url(bg1.gif);
+    border:1px solid black;
+    font-size:0;
+}
+
+div.menu2 a
+{
+    display: inline-block;
+    padding: 0 20px;
+    background-image: url(bg.gif);
+    color:White;
+    text-decoration:none;
+    font: bold 12px Arial;
+    line-height: 32px;
+}
+
+div.menu2 a:hover, div.menu2 a.current
+{
+    background-position:0 -60px;
+}
+
+div.menu2 a.dummy
+{
+    width:2px;
+    padding:0 0;
+}
