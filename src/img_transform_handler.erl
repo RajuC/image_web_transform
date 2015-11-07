@@ -11,7 +11,6 @@ init(_Type, Req, []) ->
 	{ok, Req, undefined}.
 -define(IMG_DIR,code:priv_dir(image_web_transform)++"/images/").
 handle(Req, State) ->
-	io:format("Req:: ~p~n",[Req]),
 	{ok, PostVals, _Req2} = cowboy_req:body_qs(Req),
 	TransformValues= get_post_values_list(PostVals,[]),
 	io:format("img_transform_handler::TransformValues:: ~p~n",[TransformValues]),
